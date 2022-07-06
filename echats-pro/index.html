@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>数据可视化</title>
+    <link rel="stylesheet" href="css/index.css">
+</head>
+<body>
+    <!-- 头部 -->
+    <header>
+        <h1>数据可视化-ECharts</h1>
+        <div class="showTime">1111</div>
+        <script>
+            // 计时器
+            var t = null;
+            t = setTimeout(time, 1000);
+            function time(){
+                clearTimeout(t);
+                const dt =  new Date();
+                let Y = dt.getFullYear();
+                let M = dt.getMonth() + 1;
+                let D = dt.getDate();
+                let h = dt.getHours();
+                let m = dt.getMinutes();
+                let s = dt.getSeconds();
+                let str  = `当前时间：${Y}年${M}月${D}日 ${h}:${m}:${s}`
+                document.querySelector('.showTime').innerHTML = str
+                t = setTimeout(time, 1000)
+
+            }
+        </script>
+    </header>
+    
+    <!-- 主体部分 -->
+    <section class="mainbox">
+        <!-- 左边盒子 -->
+        <div class="colum">
+            <div class="panel bar">
+                <h2>就业行业</h2>
+                <div class="chart">图表</div>
+                <div class="panel-foot"></div>
+            </div>
+            <div class="panel line">
+                <h2>人员变化</h2>
+                <div class="chart">图表</div>
+                <div class="panel-foot"></div>
+            </div>
+            <div class="panel pie">
+                <h2>年龄分布</h2>
+                <div class="chart">图表</div>
+                <div class="panel-foot"></div>
+            </div>
+        </div>
+        <!-- 中间盒子 -->
+        <div class="colum">
+            <!-- 数字模块 -->
+            <div class="no">
+                <div class="no-hd">
+                    <ul>
+                        <li>125811</li>
+                        <li>100000</li>
+                    </ul>
+                </div>
+                <div class="no-bd">
+                    <ul>
+                        <li>前端需求人数</li></li>
+                        <li>市场供应人数</li>
+                    </ul>
+                </div>
+            </div>
+            <!-- 地图模块 -->
+            <div class="map">
+                <div class="map1"></div>
+                <div class="map2"></div>
+                <div class="map3"></div>
+                <div class="chart">地图模块</div>
+            </div>
+        </div>
+        <!-- 右边盒子 -->
+        <div class="colum">
+            <div class="panel bar2">
+                <h2>专业类型</h2>
+                <div class="chart">图表</div>
+                <div class="panel-foot"></div>
+            </div>
+            <div class="panel line2">
+                <h2>播放量</h2>
+                <div class="chart">图表</div>
+                <div class="panel-foot"></div>
+            </div>
+            <div class="panel pie2">
+                <h2>地区分布</h2>
+                <div class="chart">图表</div>
+                <div class="panel-foot"></div>
+            </div>
+        </div>
+    </section>
+    <script src="http://g.tbcdn.cn/mtb/lib-flexible/0.3.4/??flexible_css.js,flexible.js"></script>
+    <script src="/js/echarts.js"></script>
+    <script src="/js/china.js"></script>
+    <script src="/js/index.js"></script>
+</body>
+</html>
